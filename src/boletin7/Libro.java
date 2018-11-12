@@ -27,38 +27,43 @@ public class Libro {
     }
 
     public void datos() {
+
         titulo = JOptionPane.showInputDialog("Introduce el titulo del libro: ");
         autor = JOptionPane.showInputDialog("Introduce el autor del libro: ");
         exemplar = Integer.parseInt(JOptionPane.showInputDialog("Introduce el numero de ejemplares: "));
-        
+
     }
 
     public boolean prestamo() {
+
         if (exemplar > 0) {
             prestado++;
             exemplar--;
             return true;
-
-        } else {
+        }
+        else {
             return false;
         }
 
     }
 
     public boolean devolucion() {
+
         if (prestado > 0) {
             exemplar++;
             prestado--;
             return true;
-        } else {
+        } 
+        else {
             return false;
         }
     }
-    public void mDatos(){
-        JOptionPane.showMessageDialog(null, "Titulo del libro: "+titulo+"\nAutor del libro: "+autor+
-                "\nNumero de exemplares: "+exemplar);
-        
-        
+
+    public void mDatos() {
+
+        JOptionPane.showMessageDialog(null, "Titulo del libro: " + titulo + "\nAutor del libro: " + autor
+                + "\nNumero de exemplares: " + exemplar);
+
     }
 
     public String getTitulo() {
@@ -93,6 +98,4 @@ public class Libro {
         this.prestado = prestado;
     }
 
-    
-    
 }
