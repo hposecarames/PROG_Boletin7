@@ -41,10 +41,9 @@ public class Libro {
             exemplar--;
             return true;
         }
-        else {
+        else 
             return false;
-        }
-
+        
     }
 
     public boolean devolucion() {
@@ -54,9 +53,9 @@ public class Libro {
             prestado--;
             return true;
         } 
-        else {
+        else 
             return false;
-        }
+        
     }
 
     public void mDatos() {
